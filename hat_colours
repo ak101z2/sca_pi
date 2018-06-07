@@ -1,0 +1,16 @@
+#!/usr/bin/python
+from sense_hat import SenseHat
+sense = SenseHat()
+import time
+import random
+yellow = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
+blue = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
+
+speed = 0.05
+
+message = "Hello World!"
+
+sense.show_message(message, speed, text_colour=yellow, back_colour=blue)
+sense.show_letter("F", blue)
+time.sleep(1)
+sense.clear()

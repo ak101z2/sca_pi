@@ -1,0 +1,21 @@
+#!/usr/bin/python
+from sense_hat import SenseHat
+sense = SenseHat()
+import time
+import random
+
+phrases = ["Can", "I", "Keep", "The", "Pi", "Hat", "?"]
+
+for word in phrases:
+	time.sleep(0.5)
+	for letter in word:
+		r = random.randint(0, 255)
+		g = random.randint(0, 255)
+		b = random.randint(0, 255)
+		sense.show_letter(letter, (r, g, b))
+		time.sleep(0.5)
+sense.clear()
+
+
+
+		

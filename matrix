@@ -1,0 +1,25 @@
+#!/usr/bin/python
+from sense_hat import SenseHat
+sense = SenseHat()
+import time
+import random
+
+r = (255, 0, 0)
+b = (0, 0, 255)
+
+pixels = [
+b,  b,  b,  b,  b,  b,  b,  b,
+r,  r,  r,  r,  r,  r,  r,  r,   
+b,  b,  b,  b,  b,  b,  b,  b,
+r,  r,  r,  r,  r,  r,  r,  r,   
+b,  b,  b,  b,  b,  b,  b,  b,
+r,  r,  r,  r,  r,  r,  r,  r,   
+b,  b,  b,  b,  b,  b,  b,  b,
+r,  r,  r,  r,  r,  r,  r,  r,   
+]
+
+sense.set_pixels(pixels)
+time.sleep(100000)
+sense.clear()
+
+	

@@ -1,0 +1,20 @@
+#!/usr/bin/python
+from sense_hat import SenseHat
+sense = SenseHat()
+import time
+
+delay = 0.05
+s = "Hello World"
+sense.show_message(s, delay, text_colour=(0, 0, 255), back_colour=(255, 0, 0))
+time.sleep(delay)
+userInput = raw_input("Enter the string displayed: ")
+
+while s != userInput:
+	delay = delay + 0.05
+	sense.show_message(s, delay, text_colour=(0, 0, 255), back_colour=(255, 0, 0))
+	time.sleep(delay)
+	userInput = raw_input("Enter the string displayed: ")
+
+sense.show_message("Win")
+sense.show_message(str(delay))
+sense.clear()
